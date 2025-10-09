@@ -1,12 +1,15 @@
 package com.example.silsup;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
+@Controller
 public class RakTest {
-    @GetMapping("/api/ping")
-    public String ping() {
-        return "bongrak";
+
+    @GetMapping("/sbbb")
+    @ResponseBody
+    public String index() {
+        return "안녕 sbb는 누가써서 sbbb로와";
     }
 }
